@@ -79,59 +79,59 @@ class Buttons extends React.Component {
                 {display}
                 <div className="row">
                     <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" name="action" onClick={() => this.sendValue(1)}>1</button>
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendValue(1)}>1</button>
                     </div>
                     <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" name="action" onClick={() => this.sendValue(2)}>2</button>
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendValue(2)}>2</button>
                     </div>
                     <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" name="action" onClick={() => this.sendValue(3)}>3</button>
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendValue(3)}>3</button>
                     </div>
                     <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" name="action" onClick={() => this.sendOperator("*")}>x</button>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" name="action" onClick={() => this.sendValue(4)}>4</button>
-                    </div>
-                    <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" name="action" onClick={() => this.sendValue(5)}>5</button>
-                    </div>
-                    <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" name="action" onClick={() => this.sendValue(6)}>6</button>
-                    </div>
-                    <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" name="action" onClick={() => this.sendOperator("/")}>/</button>
+                        <button className="btn waves-effect waves-light btn-large"onClick={() => this.sendOperator("*")}>x</button>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" name="action" onClick={() => this.sendValue(7)}>7</button>
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendValue(4)}>4</button>
                     </div>
                     <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" name="action" onClick={() => this.sendValue(8)}>8</button>
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendValue(5)}>5</button>
                     </div>
                     <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" name="action" onClick={() => this.sendValue(9)}>9</button>
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendValue(6)}>6</button>
+                    </div>
+                    <div className="col s3">
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendOperator("/")}>/</button>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col s3">
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendValue(7)}>7</button>
+                    </div>
+                    <div className="col s3">
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendValue(8)}>8</button>
+                    </div>
+                    <div className="col s3">
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendValue(9)}>9</button>
                     </div>
                     
                     <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" name="action" onClick={() => this.result()}>=</button>
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.result()}>=</button>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" name="action" onClick={() => this.sendOperator("+")}>+</button>
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendOperator("+")}>+</button>
                     </div>
                     <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" name="action" onClick={() => this.sendValue(0)}>0</button>
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendValue(0)}>0</button>
                     </div>
                     <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" name="action" onClick={() => this.sendOperator("-")}>-</button>
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendOperator("-")}>-</button>
                     </div>
                     <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" name="action" onClick={() => this.clear()}>C</button>
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.clear()}>C</button>
                     </div>
                 </div>                    
             </div>
