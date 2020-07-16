@@ -1,0 +1,15 @@
+.container {
+    margin-top: 30px;
+    width: 390px;
+    height: 500px;
+    background-color: #b2dfdb ;
+    border : 3px solid #26a69a 
+}
+.title {
+    border-bottom: 2px solid #26a69a ;
+    width: 360px;
+    margin: 5px auto;
+}
+.title h5 {
+    padding-left: 9px;
+}
