@@ -44,6 +44,9 @@ class Buttons extends React.Component {
             case "-":
                 result = Number(this.state.number1) - Number(this.state.number2);
                 break
+            case "--":
+                result = Number(this.state.number1) + Number(this.state.number2);
+                break
             case "*":
                 result = Number(this.state.number1) * Number(this.state.number2);
                 break
