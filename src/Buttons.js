@@ -16,8 +16,8 @@ class Buttons extends React.Component {
     sendValue = (number) => {
         if (this.state.operator !== "") {
             this.setState({
-                number2: this.state.number2 += number,
-                calculator: this.state.calculator = this.state.number2
+                number2: this.state.number2 = number,
+                calculator: this.state.calculator += this.state.number2
             })
         } else {
             this.setState({
@@ -30,31 +30,12 @@ class Buttons extends React.Component {
     }
     sendOperator = (op) => {
         this.setState({
-            operator: this.state.operator += op,
+            operator: this.state.operator = op,
             calculator: this.state.calculator += this.state.operator
         })
     }
     result = () => {
-        let op = this.state.operator
-        let result = null
-        switch (op) {
-            case "+":
-                result = Number(this.state.number1) + Number(this.state.number2);
-                break
-            case "-":
-                result = Number(this.state.number1) - Number(this.state.number2);
-                break
-            case "--":
-                result = Number(this.state.number1) + Number(this.state.number2);
-                break
-            case "*":
-                result = Number(this.state.number1) * Number(this.state.number2);
-                break
-            case "/":
-                result = Number(this.state.number1) / Number(this.state.number2);
-                break
-
-        }
+        let result = eval(this.state.calculator)
         this.setState({
             result: this.state.result = result,
             status: true
@@ -68,6 +49,12 @@ class Buttons extends React.Component {
             calculator: this.state.calculator = "",
             result: this.state.result = 0,
             status: this.state.status = false
+        })
+    }
+    backspace = () => {
+        this.setState({
+            calculator : this.state.calculator.substring(0, this.state.calculator.length - 1),
+            number1 : this.state.number1.substring(0, this.state.number1.length - 1)
         })
     }
     render() {
@@ -91,7 +78,7 @@ class Buttons extends React.Component {
                         <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendValue(3)}>3</button>
                     </div>
                     <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large"onClick={() => this.sendOperator("*")}>x</button>
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendOperator("*")}>x</button>
                     </div>
                 </div>
                 <div className="row">
@@ -118,7 +105,7 @@ class Buttons extends React.Component {
                     <div className="col s3">
                         <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendValue(9)}>9</button>
                     </div>
-                    
+
                     <div className="col s3">
                         <button className="btn waves-effect waves-light btn-large" onClick={() => this.result()}>=</button>
                     </div>
@@ -134,9 +121,14 @@ class Buttons extends React.Component {
                         <button className="btn waves-effect waves-light btn-large" onClick={() => this.sendOperator("-")}>-</button>
                     </div>
                     <div className="col s3">
-                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.clear()}>C</button>
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.clear()}>AC</button>
                     </div>
-                </div>                    
+                </div>
+                <div className="row">
+                    <div className="col s9">
+                        <button className="btn waves-effect waves-light btn-large" onClick={() => this.backspace()}>C</button>
+                    </div>
+                </div>
             </div>
 
         )
